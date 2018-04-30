@@ -1,0 +1,38 @@
+{% extends "movies/base.html" %}
+{% load static %}
+
+{% block breadcrumbs %}
+
+    <li class="breadcrumb-item"><a href="{% url "movies:home" %}">Home</a></li>
+    <li class="breadcrumb-item active">List</li>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-12">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <table class="table">
+                <tbody>
+                  <!-- loop through objects. thanks for help from class -->
+                  {% for o in objects %}
+                    <tr>
+                        <td>
+                            <a href="/movies/theaters/{{ o.th_id }}" class="h4" style="color:#22262a">
+                              {{ o }}
+                            </a>
+                        </td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+        </div>
+    </div>
+    <button class="button" id="myBtn" ><a style="color:white" href="#top">Top</a></button>
+{% endblock %}
+
+{% block script %}
+<script src="{% static "movies/js/movie.js" %}"></script>
+{% endblock %}

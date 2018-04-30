@@ -1,0 +1,38 @@
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- settings from tutorials  -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <title >Fandango</title>
+
+    <!-- load css -->
+    {% block css %}
+        {{ block.super }}
+        <link rel="stylesheet" href="{% static "movies/css/home.css" %}">
+    {% endblock %}
+
+  </head>
+  <body>
+    {% block body %}
+        <div class="container">
+            {% block header %}
+                <div class="row">
+                    <div class="col-12">
+                        <a href="/movies/"><h1 class="display-4">Fandango - Analysis</h1></a> <h5>Durham, Chapel Hill and Raleigh</h5>
+                    </div>
+                </div>
+            {% endblock %}
+
+            {% block content %}{% endblock %}
+        </div>
+    {% endblock %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://unpkg.com/topojson@3"></script>
+    {% block script %}{% endblock %}
+  </body>
+</html>

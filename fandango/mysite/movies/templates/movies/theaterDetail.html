@@ -1,0 +1,28 @@
+{% extends "movies/base.html" %}
+
+{% block content %}
+<div class="row containter_light">
+  <div class="col-md-12">
+    <h1>{{ name }}</h1>
+  </div>
+  <div class="col-md-12">
+    <div >
+      <li >{{ address }}</li>
+      <li > {{ phone }}</li>
+    </div>
+  </div>
+  <h3>Now Playing</h3>
+  <div class="row">
+    {% for m in movies %}
+      <div class="col-md-2">
+        <h4 style="font-size:18px"><a style="color:#5f9ea0;"href="/movies/movies/{{ m.movie_id }}"></h4>
+          <img alt="movie poster" src="https://{{ m.poster }}" style="width: 100px;">
+          <h4>{{ m.title }}</h4>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+<button class="button" id="myBtn" ><a style="color:white" href="#top">Top</a></button>
+
+{% endblock %}

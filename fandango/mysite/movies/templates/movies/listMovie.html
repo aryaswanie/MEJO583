@@ -1,0 +1,24 @@
+{% extends "movies/base.html" %}
+{% block content %}
+    <div class="row">
+      {% for o in objects %}
+          <div class="col-md-4">
+            <div class="row movie-tile">
+              <div class="col-md-5">
+              <a href="/movies/movies/{{ o.movie_id }}" class="h4">
+                <img class="moviePoster" alt="movie poster" src="https://{{ o.poster }}" >
+              </a >
+            </div>
+              <div class="col-md-7 tile-info">
+                <a style="color:#5f9ea0"href="/movies/movies/{{ o.movie_id }}"><h4>{{ o.title }}</h4></a >
+                <p>Rating: {{o.rating}}</p >
+                <p>Genre: {{o.movie_genre}}</p >
+              </div>
+            </div>
+          </div>
+      {% endfor %}
+        </div>
+          <button class="button" id="myBtn" ><a style="color:white" href="#top">Top</a></button>
+    </div>
+
+{% endblock %}

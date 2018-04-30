@@ -1,0 +1,166 @@
+.moviePoster {
+  width: 150px;
+  padding: 5%
+}
+
+a:link {
+    text-decoration: inherit;
+
+}
+a:visited{
+  color: inherit;
+}
+
+h2 {
+  color: black
+}
+
+.h4 {
+  color: white;
+  font-size:18px;
+  font-weight: lighter;
+  text-decoration: none;
+}
+
+
+a:hover {
+  color: inherit;
+  text-decoration: underline;
+}
+
+
+
+body {
+    background-color: #eceae4;
+}
+
+h1 {
+   color:#8c857d;
+   padding-top: 3%;
+   font-weight: 300;
+}
+
+h5 {
+   color:black;
+   font-weight: lighter;
+   padding-bottom: 4%;
+}
+
+
+
+
+.card-title {
+  color:white;
+}
+.breadcrumb {
+    background-color:#0000006b;
+      }
+
+
+.breadcrumb-item.active {
+        color: white;
+
+    }
+
+.movieNumber{
+  padding: 5%;
+  margin: 0 auto;
+}
+
+
+.bar_containter{
+
+  padding:10%;
+  margin-top: 100px;
+}
+
+.main_nav{
+
+    margin:0 auto;
+    color: white;
+    font-size: 20px;
+}
+
+.map{
+  margin: 0 auto;
+}
+
+.theater_info{
+  padding: 4%;
+  margin: 3%;
+  background-color: white;
+}
+
+li {
+  list-style-type: none;
+}
+.extra_padding{
+  padding: 10px;
+}
+
+.poster{
+  margin: auto 0;
+}
+
+path.slice{
+	stroke-width:2px;
+}
+
+.subtitle{
+margin: auto 0;
+text-align: center;
+background-color: #35393e82;
+font-family: inherit;
+padding: 2%;
+border-radius: 10px;}
+
+
+.subtitle2{
+margin: auto 0;
+max-width: 100%;
+text-align: center;
+background-color: #35393e82;
+font-family: inherit;
+padding: 5%;
+border-radius: 10px;}
+
+.wrap {
+  max-width: 100%;
+  color: white;
+}
+
+.pie-text {
+  max-width: 40%;
+  padding-top: 15%;
+}
+
+.containter_light{
+  background-color: white;
+  padding: 3%;
+}
+
+.card-title {
+  text-align: center;
+  font-weight: lighter;
+}
+
+.map_container{
+  background-color: white;
+  width: 100%;
+
+}
+
+.button {
+  background-color: #35393e82;
+}
+
+.movie-tile {
+  padding: 1%;
+}
+
+h3 {
+  font-weight: 300;
+  padding-top: 1%;
+  padding-bottom: 5%；
+  color:#5f9ea0;
+}

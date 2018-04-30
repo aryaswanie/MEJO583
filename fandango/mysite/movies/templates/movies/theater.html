@@ -1,0 +1,49 @@
+{% extends "movies/base.html" %}
+{% load static %}
+
+{% block breadcrumbs %}
+    <li class="breadcrumb-item active">Home</li>
+{% endblock %}
+
+
+
+{% block content %}
+    <div class="row">
+        <div class="col-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Movies
+                    </h5>
+                    <p class="card-text">
+                        <a href="{% url "movies:movies-list" %}">{{ movies.count }} Movies</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Theaters
+                    </h5>
+                    <p class="card-text">
+                        <a href="{% url "movies:theaters-list" %}">{{ theaters.count }} Theaters</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <div id="map_canvas" style="height: 354px; width:713px;"></div>
+    <div id="map"></div>
+
+
+
+
+{% endblock %}
+
+{% block script %}
+<script src="{% static "movies/js/movie.js" %}"></script>
+{% endblock %}

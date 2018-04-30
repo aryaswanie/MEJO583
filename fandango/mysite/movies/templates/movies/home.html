@@ -1,0 +1,56 @@
+
+{% extends "movies/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="containter_light">
+    <div class="row">
+        <div class="col-6">
+                    <h2 class="card-title">
+                        <a style="color:black" href="{% url "movies:theatersList" %}">Theaters</a>
+                    </h2>
+        </div>
+        <div class="col-6">
+                    <h2 class="card-title" style="color:black">
+                        <a style="color:black" href="{% url "movies:moviesList" %}"> Movies</a>  </h2>
+                    </p>
+        </div>
+    </div>
+  </div>
+    <br>
+    <div class="map_container">
+      <div class="map" id="map" style="height: 600px; min-width: 1000px;">this is the place of the map</div>
+    </div>
+    <div class="movieNumber"><h1>How many movies does each theater have?</h1></div>
+
+     <div >
+<div class="subtitle" ><p style="color:white">Chapel hill</p></div>
+<div id="movie-bar"></div>
+<div class="subtitle"><p style="color:white">Durham</p></div>
+<div id="movie-bar2"></div>
+<div class="subtitle" ><p style="color:white">Raleigh</p></div>
+<div id="movie-bar3"></div>
+     </div>
+    <div class="movieNumber"><h1>Which town has most theaters?</h1></div>
+         <div class="row">
+            <div class="column">
+     <div class="bar_containter2"id="movie-pie"></div></div>
+     <div class="column, pie-text">
+     <div class="subtitle2" ><p class="wrap">There are 18 theaters at the Raleigh Durham area. Chapel Hill has 3 theaters, making 16.7% of total, while Durham has 6 theaters, taking a third in total, and Raleigh has 9 theaters, taking a half of the total.</p></div></div>
+
+
+   </div>
+
+
+
+     <button class="button" id="myBtn" ><a style="color:white" href="#top">Top</a></button>
+
+{% endblock %}
+
+{% block script %}
+  <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-TLa0eIrhLlxQ7N4OmV8M9DW2LTUVNyM&callback=initMap">
+  </script>
+<script src="{% static "movies/js/home.js" %}"></script>
+<script src="{% static "movies/js/d3.js" %}"></script>
+
+{% endblock %}
